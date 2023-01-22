@@ -10,6 +10,28 @@ $(function(){
     $(this).toggleClass("programm__accordion-title--active")
   })
 
+  $('.about-us__slider').slick({
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+  });
+
+  $('.experts__slider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    dots: false,
+    speed: 1500,
+    prevArrow: '<span class="prev_arrow"><div class="programm__accordion-ellipse"><span></span><span></span></div></span>',
+    nextArrow: '<span class="next_arrow"><div class="programm__accordion-ellipse"><span></span><span></span></div></span>',
+  });
+
+
+
+
 
 })
 
