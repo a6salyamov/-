@@ -24,7 +24,7 @@ $(function(){
     slidesToShow: 4,
     slidesToScroll: 1,
     dots: false,
-    speed: 1500,
+    speed: 500,
     prevArrow: '<span class="prev_arrow"><div class="programm__accordion-ellipse"><span></span><span></span></div></span>',
     nextArrow: '<span class="next_arrow"><div class="programm__accordion-ellipse"><span></span><span></span></div></span>',
   });
