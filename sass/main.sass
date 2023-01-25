@@ -89,7 +89,7 @@ body
     font-size: 43px
     line-height: 60px
     text-transform: uppercase
-    span
+    .title__span-1
       display: block
       width: 773px
       height: 59px
@@ -965,7 +965,6 @@ body
   font-size: 16px
   line-height: 375%
   color: #707070
-  position: relative
   input
     font-weight: 400
     font-size: 16px
@@ -978,44 +977,76 @@ body
     color: #707070
     appearance: none
     margin-left: 20px
-  img
-    text-align: center
-    vertical-align: middle
 
-.contact__input-arrow
-  background-color: #1178B2
-  width: 0
-  height: 0
-  border-radius: 4px
-  position: absolute
-  display: block
-  z-index: 20
-  top: 30px
+.contact__input--num
+  display: flex
+  align-items: center
+
+//======================CHOICES=======================
+
+.choices
+  width: 110px
+  margin: 0
+
+.choices__inner
+  width: 110px
+  background-color: #fff
+  border: none
+  padding: 0 0 0 25px
+  font-weight: 400
+  font-size: 16px
+  height: 60px
+  vertical-align: middle
+
+.choices__list.choices__list--single
+  padding: 0
+
+.choices__item.choices__item--selectable
+  position: relative
+  & img
+    position: absolute
+    top: 22px
+    left: 50px
+
+.choices__list.choices__list--dropdown
+  width: 125px
+  height: 370px
+
+.choices__list--dropdown
+  .choices__item--selectable.is-highlighted::after
+    display: none
+
+div#choices--country-we-item-choice-1
+  background-color: #fff
+
+.choices[data-type*=select-one]::after
+  top: 25px
   left: 0
-  &::after
-    content: ''
-    background-color: #1178B2
-    width: 10px
-    height: 2px
-    border-radius: 10px
-    position: absolute
-    display: block
-    z-index: 20
-    transform: rotate(45deg)
-    left: 0
-    top: 0
-  &::before
-    content: ''
-    background-color: #1178B2
-    width: 10px
-    height: 2px
-    border-radius: 10px
-    position: absolute
-    display: block
-    z-index: 20
-    transform: rotate(-45deg)
-    left: 6.5px
-    top: 0
+  background-image: url('../images/dots.svg')
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center
+  height: 20px
+  width: 20px
+  border: none
+  transition: all .6s ease
+
+.choices[data-type*=select-one].is-open::after
+  top: 25px
+  transform: rotate(180deg)
+
+.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item img
+  position: relative
+  top: 21px
+  right: 0
+
+.choices__list--dropdown .choices__list, .choices__list[aria-expanded] .choices__list
+  overflow: visible
+
+.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable
+  padding-right: 0
+
+//-----------------------------------------------------
 
 .contact__btn
   max-width: 246px
@@ -1060,9 +1091,9 @@ body
   .header__top-inner
     font-size: 16px
 
-  .nav__menu-item 
+  .nav__menu-item
     margin-right: 34px
-  
+
   .logo__img
     width: 124px
 
@@ -1071,10 +1102,15 @@ body
     border-radius: 5px
 
   .header__body-inner
+    margin: 0 auto
     text-align: center
+    max-width: 644px
+    .header__title
+      font-size: 36px
+      .title__span-1
+        max-width: 603px
+        margin-left: 15px
+        transform: translateX(0)
+      .title__span-2
+        display: none
 
-  .header__title
-    font-size: 36px
-  
-
-  

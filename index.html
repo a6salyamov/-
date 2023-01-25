@@ -13,6 +13,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
+    <link rel="stylesheet" href="css/choices.min.css">
   <link rel="stylesheet" href="css/main.css">
   <title>Document</title>
 </head>
@@ -42,7 +43,7 @@
         <div class="container">
           <div class="header__body-inner">
             <h1 class="header__title">Запустите
-              <span>технологический IT-бизнес</span>
+              <span class="title__span-1">технологический <span class="title__span-2">IT-</span>бизнес</span>
               на международных рынках
             </h1>
             <p class="header__text">
@@ -943,14 +944,9 @@
             <form class="contact__form">
               <input class="contact__input" type="text" placeholder="Имя">
               <input class="contact__input" type="text" placeholder="Почта">
-              <div class="contact__input">
-                <span class="contact__input-arrow"></span>
-                <select name="tel-number" id="tel-number">
-                  <option value="1">(971)</option>
-                  <option value="2">(961)</option>
-                  <option value="3">(951)</option>
-                </select>
-                <img src="images/contact-country.svg" alt="">
+              <div class="contact__input contact__input--num">
+                  <select name="country" class="contact__choices">
+                  </select>
                 <input type="tel">
               </div>
               <button class="contact__btn button-green" type="submit">Оставить заявку</button>
@@ -987,6 +983,7 @@
   integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
+<script src="js/choices.min.js"></script>
 <script src="js/main.js"></script>
 
 </html>
